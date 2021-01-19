@@ -8,7 +8,7 @@ description: "Common questions asked about Dapr"
 
 ## Networking and service meshes
 
-### Understanding how Dapr works with service meshes
+### How does Dapr interact with service meshes? 
 
 Dapr is a distributed application runtime.  Unlike a service mesh which is focused on networking concerns, Dapr is focused on providing building blocks that make it easier for developers to build microservices.  Dapr is developer-centric versus service meshes being infrastructure-centric.
 
@@ -18,17 +18,17 @@ That is where Dapr comes in. Dapr is a language agnostic programming model built
 
 Watch this [video](https://www.youtube.com/watch?v=xxU68ewRmz8&feature=youtu.be&t=140) on how Dapr and service meshes work together.
 
-### Understanding how Dapr interoperates with the service mesh interface (SMI)
+### How does Dapr interoperates with the service mesh interface (SMI)?
 
 SMI is an abstraction layer that provides a common API surface across different service mesh technology.  Dapr can leverage any service mesh technology including SMI.
 
-### Differences between Dapr, Istio and Linkerd
+### What are the differences between Dapr, Istio and Linkerd?
 
 Read [How does Dapr work with service meshes?](https://github.com/dapr/dapr/wiki/FAQ#how-does-dapr-work-with-service-meshes) Istio is an open source service mesh implementation that focuses on Layer7 routing, traffic flow management and mTLS authentication between services. Istio uses a sidecar to intercept traffic going into and out of a container and enforces a set of network policies on them.
 
 Istio is not a programming model and does not focus on application level features such as state management, pub-sub, bindings etc. That is where Dapr comes in.
 
-## Performance Benchmarks
+## Can I see any performance benchmarks?
 The Dapr project is focused on performance due to the inherent discussion of Dapr being a sidecar to your application. This [performance benchmark video](https://youtu.be/4kV3SHs1j2k?t=783) discusses and demos the work that has been done so far. The performance benchmark data is planned to be published on a regular basis. You can also run the perf tests in your own environment to get perf numbers. 
 
 ## Actors
@@ -38,7 +38,7 @@ The Dapr project is focused on performance due to the inherent discussion of Dap
 The actors in Dapr are based on the same virtual actor concept that [Orleans](https://www.microsoft.com/research/project/orleans-virtual-actors/) started, meaning that they are activated when called and deactivated after a period of time. If you are familiar with Orleans, Dapr C# actors will be familiar. Dapr C# actors are based on [Service Fabric Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction) (which also came from Orleans) and enable you to take Reliable Actors in Service Fabric and migrate them to other hosting platforms such as Kubernetes or other on-premise environments.
 Also Dapr is about more than just actors. It provides you with a set of best practice building blocks to build into any microservices application. See [Dapr overview](https://github.com/dapr/docs/blob/master/overview/README.md).
 
-### Differences between Dapr from an actor framework
+### What are the differences between Dapr from an actor framework?
 
 Virtual actors capabilities are one of the building blocks that Dapr provides in its runtime. With Dapr because it is programming language agnostic with an http/gRPC API, the actors can be called from any language. This allows actors written in one language to invoke actors written in a different language.
 
